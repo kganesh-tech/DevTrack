@@ -1,7 +1,7 @@
 const problemsContainer =
  document.getElementById("problemsContainer");
 
-fetch("http://localhost:3000/problems" , {
+fetch("/problems" , {
     method : "GET",
 })
 
@@ -44,7 +44,7 @@ fetch("http://localhost:3000/problems" , {
             date : problem.date
         };
 
-        fetch(`http://localhost:3000/problems/${index}` , {
+        fetch(`/problems/${index}` , {
             method: "PUT",
             headers : {
                 "Content-Type" : "application/json"
@@ -67,7 +67,7 @@ fetch("http://localhost:3000/problems" , {
     deleteBtn.addEventListener("click" , function(event) {
         event.preventDefault();
 
-    fetch("http://localhost:3000/problems/${index}" , {
+    fetch("/problems/${index}" , {
         method : "DELETE",
     })
     .then(res => res.json())

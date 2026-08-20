@@ -16,7 +16,7 @@ document.getElementById("difficulty").value;
   const date =
   document.getElementById("dateSolved").value;
 
-fetch("http://localhost:3000/problems" , {
+fetch("/problems" , {
     method : "POST",
      headers : {
          "Content-Type" : "application/json"
