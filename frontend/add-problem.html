@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Problem - DevTrack</title>
+    <link rel="stylesheet" href="add-problem.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span>Dev</span>Track
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="problems.html">Problems</a>
+            <a href="add-problem.html" class="active">Add Problem</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="profile-avatar">G</div>
+                <div>
+                    <h4>Developer</h4>
+                    <p>DSA Progress</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Add Problem</h1>
+                <p>Track a new coding problem you've solved.</p>
+            </div>
+        </header>
+
+        <section class="form-container">
+
+            <div class="form-header">
+                <h2>Problem Details</h2>
+                <p>Enter the details of your coding problem.</p>
+            </div>
+
+            <form id="problemForm">
+
+                <div class="form-group">
+                    <label for="problemName">Problem Name</label>
+                    <input
+                        type="text"
+                        id="problemName"
+                        placeholder="e.g. Two Sum"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="platform">Platform</label>
+                        <select id="platform" required>
+                            <option value="">Select platform</option>
+                            <option value="LeetCode">LeetCode</option>
+                            <option value="GeeksforGeeks">GeeksforGeeks</option>
+                            <option value="CodeChef">CodeChef</option>
+                            <option value="HackerRank">HackerRank</option>
+                            <option value="Codeforces">Codeforces</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty">Difficulty</label>
+                        <select id="difficulty" required>
+                            <option value="">Select difficulty</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="topic">Topic</label>
+                        <select id="topic" required>
+                            <option value="">Select topic</option>
+                            <option value="Array">Array</option>
+                            <option value="String">String</option>
+                            <option value="Linked List">Linked List</option>
+                            <option value="Stack">Stack</option>
+                            <option value="Queue">Queue</option>
+                            <option value="Binary Search">Binary Search</option>
+                            <option value="Two Pointer">Two Pointer</option>
+                            <option value="Sliding Window">Sliding Window</option>
+                            <option value="Tree">Tree</option>
+                            <option value="Graph">Graph</option>
+                            <option value="Dynamic Programming">Dynamic Programming</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" required>
+                            <option value="">Select status</option>
+                            <option value="Solved">Solved</option>
+                            <option value="Attempted">Attempted</option>
+                            <option value="Unsolved">Unsolved</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="dateSolved">Date</label>
+                    <input type="date" id="dateSolved" required>
+                </div>
+
+                <div class="form-actions">
+                    <a href="dashboard.html" class="cancel-btn">Cancel</a>
+                    <button type="submit" class="submit-btn" id="addproblemBtn">Add Problem</button>
+                </div>
+
+                <p id="message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="add-problem.js"></script>
+</body>
+</html>

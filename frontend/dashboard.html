@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTrack Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span>Dev</span>Track
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="problems.html">Problems</a>
+            <a href="add-problem.html">Add Problem</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="profile-avatar">G</div>
+                <div>
+                    <h4>Developer</h4>
+                    <p>DSA Progress</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Track your coding progress and stay consistent.</p>
+            </div>
+
+            <a href="add-problem.html" class="add-btn">+ Add Problem</a>
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Problems</span>
+                    <div class="stat-icon">⌘</div>
+                </div>
+                <h2 id="totalProblems">0</h2>
+                <p>Problems tracked</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Easy</span>
+                    <div class="stat-icon">E</div>
+                </div>
+                <h2 id="easyProblems">0</h2>
+                <p>Easy problems</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Medium</span>
+                    <div class="stat-icon">M</div>
+                </div>
+                <h2 id="mediumProblems">0</h2>
+                <p>Medium problems</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Hard</span>
+                    <div class="stat-icon">H</div>
+                </div>
+                <h2 id="hardProblems">0</h2>
+                <p>Hard problems</p>
+            </div>
+
+        </section>
+
+        <section class="dashboard-grid">
+
+            <div class="panel progress-panel">
+                <div class="panel-header">
+                    <div>
+                        <h3>Difficulty Progress</h3>
+                        <p>Your problem-solving distribution</p>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Easy</span>
+                        <strong id="easyPercent">0%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill easy" id="easyProgress"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Medium</span>
+                        <strong id="mediumPercent">0%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill medium" id="mediumProgress"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Hard</span>
+                        <strong id="hardPercent">0%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill hard" id="hardProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h3>Quick Overview</h3>
+                        <p>Your current activity</p>
+                    </div>
+                </div>
+
+                <div class="overview">
+                    <div>
+                        <span>Problems Solved</span>
+                        <strong id="solvedProblems">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Topics Practiced</span>
+                        <strong id="topicCount">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Current Streak</span>
+                        <strong id="currentStreak">0 days</strong>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel recent-panel">
+
+            <div class="panel-header">
+                <div>
+                    <h3>Recent Problems</h3>
+                    <p>Your latest tracked problems</p>
+                </div>
+
+                <a href="problems.html">View all</a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Platform</th>
+                            <th>Difficulty</th>
+                            <th>Topic</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentProblems">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

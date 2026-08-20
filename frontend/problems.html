@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems - DevTrack</title>
+    <link rel="stylesheet" href="problems.css">
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <span>Dev</span>Track
+        </div>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="problems.html" class="active">Problems</a>
+            <a href="add-problem.html">Add Problem</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="profile-avatar">G</div>
+                <div>
+                    <h4>Developer</h4>
+                    <p>DSA Progress</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Problems</h1>
+                <p>Track and manage your coding problems.</p>
+            </div>
+
+            <a href="add-problem.html" class="add-btn">
+                + Add Problem
+            </a>
+
+        </header>
+
+        <section class="problems-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>All Problems</h2>
+                    <p>Your DSA problem collection</p>
+                </div>
+
+                <div class="problem-count">
+                    <span id="problemCount">0</span> Problems
+                </div>
+            </div>
+
+            <div class="problems-container" id="problemsContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="problems.js"></script>
+
+</body>
+</html>
