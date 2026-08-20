@@ -1,10 +1,10 @@
 [
   {
-    "problemName": "Two Sum",
+    "problemName": "Palindrome",
     "platform": "LeetCode",
-    "difficulty": "Medium",
-    "topic": "Array",
+    "difficulty": "Easy",
+    "topic": "Other",
     "status": "Solved",
-    "date": "2026-08-19"
+    "date": "2026-08-20"
   }
 ]

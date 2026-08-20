@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
+const problemsPath = path.join(__dirname, "problems.json");
 
 app.get("/" , (req,res) => {
     res.sendFile(path.join(__dirname, "../frontend/dashboard.html"));
@@ -21,7 +22,7 @@ app.post("/problems" , (req,res) => {
     const status = req.body.status;
     const date = req.body.date;
 
-fs.readFile("problems.json" , "utf-8" , (err,data) => {
+fs.readFile(problemsPath , "utf-8" , (err,data) => {
     if(err) {
         return res.status(400).json({
             message : "error in reading file"
@@ -38,7 +39,7 @@ fs.readFile("problems.json" , "utf-8" , (err,data) => {
     date : date
   });
 
-fs.writeFile("problems.json" , JSON.stringify(problems , null , 2) , (err) => {
+fs.writeFile(problemsPath , JSON.stringify(problems , null , 2) , (err) => {
     if(err) {
         return res.status(400).json({
             message : "error in writing file"
@@ -55,7 +56,7 @@ fs.writeFile("problems.json" , JSON.stringify(problems , null , 2) , (err) => {
 
 app.get("/problems" , (req,res) => {
 
-fs.readFile("problems.json" , "utf-8" , (err,data) => {
+fs.readFile(problemsPath , "utf-8" , (err,data) => {
     if(err) {
         return res.status(400).json({
               message : "error in reading file"
@@ -73,7 +74,7 @@ fs.readFile("problems.json" , "utf-8" , (err,data) => {
 app.delete("/problems/:index" , (req,res) => {
     const index = Number(req.params.index);
 
-    fs.readFile("problems.json" , "utf-8" , (err,data) => {
+    fs.readFile(problemsPath, "utf-8" , (err,data) => {
         if(err) {
             return res.status(400).json({
                 message : "error in reading file"
@@ -90,7 +91,7 @@ app.delete("/problems/:index" , (req,res) => {
 
         problems.splice(index, 1);
 
-        fs.writeFile("problems.json" , JSON.stringify(problems , null , 2) , (err) => {
+        fs.writeFile(problemsPath , JSON.stringify(problems , null , 2) , (err) => {
             if(err) {
                 return res.status(400).json({
                     message : "error in writing file"
